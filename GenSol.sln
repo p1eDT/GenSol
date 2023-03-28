@@ -5,7 +5,7 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitTest1", "GitTest1\GitTest1.csproj", "{AB75C0D4-5D6B-45C2-B3F6-993D2DA23AF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHome1", "ConsoleApp1\GitHome1.csproj", "{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHome1", "GitHome1\GitHome1.csproj", "{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
