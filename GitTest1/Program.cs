@@ -10,6 +10,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             var name=Console.ReadLine();
             Console.WriteLine(name);
             Console.WriteLine(name);
+            Console.WriteLine(name);
         }
     }
 }
