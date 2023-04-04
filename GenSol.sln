@@ -7,6 +7,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitTest1", "GitTest1\GitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHome1", "GitHome1\GitHome1.csproj", "{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHome1", "GitHome1\GitHome1.csproj", "{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GitHome2", "GitHome2\GitHome2.csproj", "{BFBB6483-8EB1-456D-8189-97C093568027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,10 @@ Global
 		{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A139A67C-BF4A-4DDC-83AE-EEB0B65C3C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFBB6483-8EB1-456D-8189-97C093568027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFBB6483-8EB1-456D-8189-97C093568027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFBB6483-8EB1-456D-8189-97C093568027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFBB6483-8EB1-456D-8189-97C093568027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
