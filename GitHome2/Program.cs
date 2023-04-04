@@ -1,4 +1,4 @@
-﻿namespace GitHome1 // Note: actual namespace depends on the project name.
+﻿namespace GitHome2 // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
