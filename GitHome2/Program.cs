@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text.RegularExpressions;
-
-namespace GitHome1 // Note: actual namespace depends on the project name.
+﻿namespace GitHome1 // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
@@ -12,6 +9,7 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
             Task3();
             Task4();
         }
+
         public static void Task1()
         {
             Console.WriteLine("Enter first number");
@@ -30,6 +28,7 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
 
             Console.WriteLine("Enter arithmetic operation");
             string sign = Convert.ToString(Console.ReadKey().KeyChar);
+
             Decimal result = 0;
 
             switch (sign)
@@ -53,8 +52,10 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
                     Console.WriteLine("\r\nPlease use only arithmetic operations");
                     return;
             }
+
             Console.WriteLine("\r\nresult: " + result);
         }
+
         public static void Task2()
         {
             Console.WriteLine("Enter integer");
@@ -63,6 +64,7 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
                 Console.WriteLine("Please use only integer");
                 return;
             }
+
             string result = "your number is not included in any of the available number ranges";
             switch (userNum)
             {
@@ -82,7 +84,6 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
             Console.WriteLine(result);
         }
 
-
         public static void Task3()
         {
             Console.WriteLine("Введите слово о погоде на русском языке: ");
@@ -94,6 +95,7 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
             }
 
             string wordEn = "Перевод: ";
+
             switch (wordRu)
             {
                 case "Солнце": wordEn += "Sun"; break;
@@ -110,6 +112,7 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
             }
             Console.WriteLine(wordEn);
         }
+
         public static void Task4()
         {
             Console.WriteLine("Enter integer");
@@ -118,7 +121,6 @@ namespace GitHome1 // Note: actual namespace depends on the project name.
                 Console.WriteLine("Please use only integer");
                 return;
             }
-
             Console.WriteLine("Your number " + userNumber + " is " + ((userNumber % 2 != 0) ? "un" : "") + "even");
         }
     }
