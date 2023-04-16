@@ -16,7 +16,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Patient patient3 = new Patient("Evgen", IlnessType.Eyes);
             Patient[] patients = { patient1, patient2, patient3 };
 
-            Clinic clinic = new Clinic("NewClinic", doctors, IlnessType.Other, patients);
+            Clinic clinic = new Clinic("NewClinic", doctors, patients);
 
             clinic.Treating(patients);
         }

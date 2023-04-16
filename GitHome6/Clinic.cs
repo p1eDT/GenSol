@@ -14,13 +14,10 @@ namespace GitHome6
 
         public Patient[] Patients { get; set; }
 
-        public IlnessType IlnessType { get; set; }
-
-        public Clinic(string title, Doctor[] doctors, IlnessType ilnessType, Patient[] patients)
+        public Clinic(string title, Doctor[] doctors, Patient[] patients)
         {
             Title = title;
             Doctors = doctors;
-            IlnessType = ilnessType;
             Patients = patients;
         }
 
