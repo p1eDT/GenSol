@@ -1,38 +1,27 @@
-﻿    namespace GitHome5 // Note: actual namespace depends on the project name.
+﻿using System;
+
+namespace GitHome5 // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             StudentCreator studentCreator = new StudentCreator();
-            Student[] studentsArrayGroup1 = studentCreator.CreateStudent("Not Ice");
-            Student[] studentsArrayGroup2 = studentCreator.CreateStudent("Ice!!");
-            Student[] studentsArrayGroup3 = studentCreator.CreateStudent("Pro");
+            Student[] students = studentCreator.CreateStudent();
+            Group group1 = new Group(students[0..5], "Group1");
+            Group group2 = new Group(students[5..10], "Group2");
+            Group group3 = new Group(students[10..], "Group3");
 
-            //foreach (Student[] stusdent in group1)
-           
-            //    for(int i = 0; i < studentsArrayGroup1.Length; i++)
-            //    {
-            //    Console.WriteLine(studentsArrayGroup1[i].Age);
-            //    }
-            //foreach (Student student in studentsArrayGroup1)
-            //{
-            //    for(int i = 0)
-            //}
-            int max;
-            max  = 0;
-            //double average = matrix[0];
 
-            for (int i = 1; i < studentsArrayGroup1.Length; i++)
-            {
-                //average += matrix[i];
-                if (studentsArrayGroup1[i].MathMark > max && studentsArrayGroup1[i].MathMark != max)
-                {
-                    max = studentsArrayGroup1[i].MathMark;
-                }
-            }
-            Console.WriteLine(max);
-            //group1.ShowBestMarkStudent(group1);
+            group2.ShowInfo();                                  Console.WriteLine();
+
+            group2.ShowBestBiologyMark();                       Console.WriteLine();
+            group2.ShowBestMathMark();                          Console.WriteLine();
+            group2.ShowBestPhysicalEducationMark();             Console.WriteLine();
+
+            group2.SetReward();                                 Console.WriteLine();
+
+            group2.ShowInfo();
         }
     }
 }
