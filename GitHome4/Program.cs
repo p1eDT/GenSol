@@ -151,7 +151,6 @@ namespace MyApp // Note: actual namespace depends on the project name.
                         i++;
                     }
                 }
-
                 s += String.Format("{0,-15} {1,-10:N0}\n", word, i);
                 i = 0;
             }
