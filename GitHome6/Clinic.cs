@@ -21,15 +21,6 @@ namespace GitHome6
             Patients = patients;
         }
 
-        public void ShowInfo()
-        {
-            Console.WriteLine($"ilnessType: {Title}");
-            foreach (var doctor in Doctors)
-            {
-                doctor.ShowInfo();
-            }
-        }
-
         private DoctorType getDoctorTypeByIlness(IlnessType ilnessType)
         {
             AssociationDoctorToIlness association = new AssociationDoctorToIlness();

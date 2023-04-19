@@ -15,17 +15,6 @@ namespace GitHome6
             DoctorType = doctorType;
         }
 
-        public void Show()
-        {
-            ShowInfo();
-        }
-
-        public override void ShowInfo()
-        {
-            base.ShowInfo();
-            Console.WriteLine($"ilnessType: {DoctorType}");
-        }
-
         public void Treat(DoctorType doctorType)
         {
             if (DoctorType == doctorType)

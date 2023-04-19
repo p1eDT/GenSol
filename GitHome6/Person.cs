@@ -14,10 +14,5 @@ namespace GitHome6
         {
             Name = name;
         }
-
-        public virtual void ShowInfo()
-        {
-            Console.WriteLine($"Name: {Name}");
-        }
     }
 }
