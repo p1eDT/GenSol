@@ -6,19 +6,32 @@ using System.Threading.Tasks;
 
 namespace GitHome7
 {
-    public class Cleaner : Employee
+    public class Cleaner : Employee, IPositionable, IWork
     {
+        public Positions Position { get; set; } = Positions.Cleaner;
+
         public Cleaner(string name) : base(name)
         {
+
         }
 
-        public override void CanDo()
+        public override string[] WhatDo()
         {
-            WhatHeDo();
+            string[] doing = { "Cleaning" };
+            return doing;
         }
-        public void WhatHeDo()
+
+        public override string ToString()
         {
-            Console.WriteLine("Cleaning");
+            return $"{Position}";
+        }
+
+        public void Work()
+        {
+            foreach (string doing in WhatDo())
+            {
+                Console.Write(Position.ToString() + " " + Name + " is " + doing + "\n\r");
+            }
         }
     }
 }
