@@ -2,7 +2,7 @@
 using System;
 using System.Reflection.Metadata.Ecma335;
 
-namespace GitHome8 // Note: actual namespace depends on the project name.
+namespace GitHome9 // Note: actual namespace depends on the project name.
 {
     public class Program
     {
@@ -19,7 +19,7 @@ namespace GitHome8 // Note: actual namespace depends on the project name.
         {
             string[] names = { "Alex", "Fedya", "Roman", "Nikita", "Mary", "Anna", "Ekaterina", "Seb", "Artem" };
             int[] age = { 30, 22, 57, 33, 23, 44, 171, 18, 19 };
-            int[] salary = { 110, 220, 570, 330, 2300, 430, 1700, 180, 190 };
+            int[] salary = { 110, 220, 570, 330, 2300, 430, 1700, 199, 1035 };
 
             List<Person> persons = new List<Person>(Person.Create(names, age, salary));  // Обработайте исключения
 

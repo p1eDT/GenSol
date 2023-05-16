@@ -177,6 +177,7 @@ namespace GitHome9
                 person.ShowPersonName(false);
                 person.ShowPersonAge(false);
                 person.ShowPersonSalary(false);
+                Console.WriteLine();
             }
         }
 
