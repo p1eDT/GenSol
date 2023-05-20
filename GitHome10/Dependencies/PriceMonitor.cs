@@ -9,33 +9,26 @@ namespace GitHome10.Dependencies
 {
     public class PriceMonitor
     {
-        public delegate void Price(int price);
+        public Action<int> ShowPrice { get; set; }
 
-        static int AveragePrice { get; set; }
+        public int AveragePrice { get; set; }
 
-        public PriceMonitor(int p)
+        public PriceMonitor(Action<int> showPrice)
         {
-            AveragePrice = GetPrice();
-            ShowPrice(p);
+            AveragePrice = GetPrice();  //сразу передаем сгенерированную цену
+            ShowPrice=showPrice;        //сюда пихаем делегат, в который в качестве параметра из Program.Main передан метод MyFormat, который в классе Program.
         }
 
-        public static void ShowPrice(int price)
+        public void Show()
         {
-            Price averagePrice;
-            averagePrice = Show;
-            averagePrice(price);
+            ShowPrice(AveragePrice);    //по сути тут метод, в который передаем интовый параметр AveragePrice. Как я понимаю, аналогично Program.MyFormat(AveragePrice)
         }
 
-        public static int GetPrice()
+        private int GetPrice()
         {
             Random rnd = new Random();
-            int randomPrice = rnd.Next(100, 1000);
+            int randomPrice = rnd.Next(1000, 100000);
             return randomPrice;
-        }
-
-        public static void Show(int price)
-        {
-            Console.WriteLine($"Price for you: {AveragePrice + price}");
         }
     }
 }
