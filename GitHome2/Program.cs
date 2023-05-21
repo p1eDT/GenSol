@@ -1,4 +1,6 @@
-﻿namespace GitHome2 // Note: actual namespace depends on the project name.
+﻿using System.Text.RegularExpressions;
+
+namespace GitHome2 // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
