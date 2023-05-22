@@ -16,10 +16,27 @@ namespace GitHome10
         static void Main(string[] args)
         {
             PriceMonitor priceMonitor = new PriceMonitor(MyFormat);
-            priceMonitor.Show();
- 
+            //1
+            //priceMonitor.Show();
 
+            List <User> users= new List<User>()
+            {
+                new User("Alex","Petrovich", "Ivanov"),
+                new User("Gadya","Petrovich", "Hrenovo"),
+                new User("Dim", "Dimych", "Aynane"),
+                new User("Alex","", "Shmalex")
+            };
 
+            //foreach (var user in users)
+            //{
+            //    user.GetUserAfterCheckMiddleName();
+            //}
+
+            var userSort=User.ReverseOrderByLastName(users);
+            foreach (var user in userSort)
+            {
+                user.Show();
+            }
 
         }
 

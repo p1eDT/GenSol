@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GitHome10.Linq
+namespace GitHome10
 {
     public class User
     {
@@ -26,15 +27,28 @@ namespace GitHome10.Linq
         /// </summary>
         public void GetUserAfterCheckMiddleName()
         {
-
+            if (MiddleName == "" || MiddleName==null)
+            { 
+                Console.WriteLine($"FirstName: {FirstName}\t LastName: {LastName}"); 
+            }
+            else 
+            { 
+                Show(); 
+            }
         }
 
         /// <summary>
         /// Напишите метод, который возвращает предоставленный список пользователей, упорядоченный по LastName в порядке убывания.
         /// </summary>
-        public void ReverseOrderByLastName()
+        public static List<User> ReverseOrderByLastName(List<User> user)
         {
+            var userSort=user.OrderBy(u=>u.LastName).Reverse();
+            return userSort.ToList();
+        }
 
+        public void Show()
+        {
+            Console.WriteLine($"FirstName: {FirstName}\t MiddleName: {MiddleName}\t LastName: {LastName}");
         }
     }
 }
