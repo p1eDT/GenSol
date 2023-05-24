@@ -42,8 +42,7 @@ namespace GitHome10
         /// </summary>
         public static List<User> ReverseOrderByLastName(List<User> user)
         {
-            var userSort=user.OrderBy(u=>u.LastName).Reverse();
-            return userSort.ToList();
+            return user.OrderBy(u=>u.LastName).Reverse().ToList();
         }
 
         public void Show()
