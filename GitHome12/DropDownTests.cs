@@ -13,7 +13,8 @@ namespace GitHome12
             SelectElement select = new(driver.FindElement(By.Id("dropdown")));
 
             select.SelectByIndex(2);
-            select.SelectByText("Please select an option");
+
+            Assert.That(() => select.SelectByText("Please select an option"), Throws.InvalidOperationException);
         }
     }
 }

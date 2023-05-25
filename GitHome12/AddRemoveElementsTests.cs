@@ -11,7 +11,7 @@ namespace GitHome12
             var expectedUrl = "https://the-internet.herokuapp.com/add_remove_elements/";
 
             driver.FindElement(By.LinkText("Add/Remove Elements")).Click();
-            Assert.AreEqual(expectedUrl, driver.Url);
+            Assert.That(driver.Url, Is.EqualTo(expectedUrl));
 
             driver.FindElement(By.TagName("Button")).Click();
             var addedButton= driver.FindElement(By.ClassName("added-manually"));

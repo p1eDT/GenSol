@@ -5,7 +5,7 @@ namespace GitHome12
     public class TyposTests : BaseTest
     {
         [Test]
-        public void CheckTableValue()
+        public void CheckTypos()
         {
             driver.FindElement(By.LinkText("Typos")).Click();
 
