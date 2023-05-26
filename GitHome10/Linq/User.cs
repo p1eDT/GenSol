@@ -23,7 +23,7 @@ namespace GitHome10
         }
 
         /// <summary>
-        /// Напишите метод, который возвращает "<FirstName> <MiddleName> <LastName>", если отчество присутствует Или "<FirstName> <LastName>", если отчество отсутствует.
+        /// Напишите метод, который возвращает "<FirstName> <MiddleName> <LastName>", если отчество присутствует ли "<FirstName> <LastName>", если отчество отсутствует.
         /// </summary>
         public void GetUserAfterCheckMiddleName()
         {
