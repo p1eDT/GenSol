@@ -7,7 +7,13 @@ namespace GitHome13.Tests
         [Test]
         public void Login_StandartUser()
         {
-            var InventoryPage = new LoginPage(driver).OpenPage().LoginAsStandartUser();
+            var inventoryPage = new LoginPage(driver).OpenPage().LoginAsStandartUser();
         }
+
+        //[Test]
+        //public void Login_PerformanceGlitchUser()
+        //{
+        //    var InventoryPage = new LoginPage(driver).OpenPage().LoginAsPerformanceGlitchUser();
+        //}
     }
 }

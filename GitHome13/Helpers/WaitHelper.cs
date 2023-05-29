@@ -19,6 +19,5 @@ namespace GitHome13.Helpers
         {
             new WebDriverWait(driver, TimeSpan.FromSeconds(time)).Until(element => element.FindElements(by).Count == count);
         }
-
     }
 }

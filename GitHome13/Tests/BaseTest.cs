@@ -18,13 +18,13 @@ namespace GitHome13.Tests
             driver = new ChromeDriver();
             MonitorHelper.MoveToRightMon();
             driver.Manage().Window.Maximize();
-            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(15);
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(5);
         }
 
         [TearDown]
         public void TearDown()
         {
-            //driver.Quit();
+            driver.Quit();
         }
     }
 }
