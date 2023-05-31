@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using GitHome13.Core;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace GitHome13.Tests
         [SetUp]
         public void Setup()
         {
-            driver.Navigate().GoToUrl("https://www.saucedemo.com/");
+            Browser.Instance.NavigateToUrl("https://www.saucedemo.com/");
         }
     }
 }

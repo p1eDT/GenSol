@@ -1,32 +1,36 @@
-﻿using OpenQA.Selenium;
+﻿using GitHome13.Core;
+using OpenQA.Selenium;
 
 namespace GitHome13.Pages.Checkout
 {
     internal class CheckoutPageStepTwo : BasePage
     {
+        private By cancelButton = By.Id("cancel");
+        private By finishButton = By.Id("finish");
+
         public const string URL_CHECKOUT_STEP_TWO = "https://www.saucedemo.com/checkout-step-two.html";
 
-        public CheckoutPageStepTwo(WebDriver driver) : base(driver)
+        public CheckoutPageStepTwo()
         {
             
         }
 
         public override BasePage OpenPage()
         {
-            Driver.Navigate().GoToUrl(URL_CHECKOUT_STEP_TWO);
+            Browser.Instance.NavigateToUrl(URL_CHECKOUT_STEP_TWO);
             return this;
         }
 
         public InventoryPage ClickCancel()
         {
-            Driver.FindElement(By.Id("cancel")).Click();
-            return new InventoryPage(Driver);
+            Driver.FindElement(cancelButton).Click();
+            return new InventoryPage();
         }
 
         public CheckoutComplete ClickFinish()
         {
-            Driver.FindElement(By.Id("finish")).Click();
-            return new CheckoutComplete(Driver);
+            Driver.FindElement(finishButton).Click();
+            return new CheckoutComplete();
         }
     }
 }

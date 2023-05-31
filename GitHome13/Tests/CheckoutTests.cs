@@ -1,4 +1,5 @@
-﻿using GitHome13.Pages;
+﻿using GitHome13.Core;
+using GitHome13.Pages;
 using GitHome13.Tests;
 
 namespace GitHome13.Tests
@@ -9,7 +10,7 @@ namespace GitHome13.Tests
         [Test]
         public void EndToEndTest()
         {
-            new LoginPage(driver).OpenPage().LoginAsStandartUser()
+            new LoginPage().OpenPage().LoginAsStandartUser()
                 .AddItemsToCart(6)
                 .OpenCart()
                 .ClickCheckout()
@@ -17,6 +18,8 @@ namespace GitHome13.Tests
                 .ClickContinue()
                 .ClickFinish()
                 .ClickBackHome();
+
+            Assert.That(Browser.Instance.Driver.Url, Is.EqualTo(InventoryPage.URL_INVENTORY_PAGE));
         }
     }
 }

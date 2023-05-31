@@ -1,15 +1,15 @@
 ﻿using OpenQA.Selenium;
-using System;
+using GitHome13.Core;
 
 namespace GitHome13.Pages
 {
     internal abstract class BasePage
     {
-        protected WebDriver Driver;
+        protected IWebDriver Driver;
 
-        public BasePage(WebDriver driver)
+        public BasePage()
         {
-            Driver = driver;
+            Driver = Browser.Instance.Driver;
         }
 
         public abstract BasePage OpenPage();

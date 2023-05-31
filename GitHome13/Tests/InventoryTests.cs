@@ -8,7 +8,7 @@ namespace GitHome13.Tests
         [Test]
         public void AddItemsToCart()
         {
-            new LoginPage(driver).OpenPage().LoginAsStandartUser()
+            new LoginPage().OpenPage().LoginAsStandartUser()
                .AddItemsToCart(2);
 
         }
@@ -16,7 +16,7 @@ namespace GitHome13.Tests
         [Test]
         public void GoToCart()
         {
-            new LoginPage(driver).OpenPage().LoginAsStandartUser()
+            new LoginPage().OpenPage().LoginAsStandartUser()
                 .AddItemsToCart(6)
                 .OpenCart();
         }

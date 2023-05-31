@@ -1,4 +1,5 @@
-﻿using GitHome13.Helpers;
+﻿using GitHome13.Core;
+using GitHome13.Helpers;
 using OpenQA.Selenium;
 using SeleniumTests.SwagLabs;
 
@@ -19,7 +20,7 @@ namespace GitHome13.Pages
         public const string PERFORMANCE_GLITCH_USER = "performance_glitch_user";
         public const string STANDART_USER_PASSWORD = "secret_sauce";
 
-        public LoginPage(WebDriver driver) : base(driver)
+        public LoginPage() 
         {
         }
 
@@ -27,7 +28,7 @@ namespace GitHome13.Pages
         {
             var standartUser = new UserModel(STANDART_USER_NAME, STANDART_USER_PASSWORD);
             TryToLoginByUserModel(standartUser);
-            return new InventoryPage(Driver);  
+            return new InventoryPage();  
         }
 
         public LoginPage LoginAsLockedOutUser()
@@ -49,7 +50,7 @@ namespace GitHome13.Pages
             var performanceGlitchUser = new UserModel(PERFORMANCE_GLITCH_USER, STANDART_USER_PASSWORD);
             TryToLoginByUserModel(performanceGlitchUser);
             WaitHelper.WaitElement(Driver, By.Id("header_container"), 6);
-            return new InventoryPage(Driver);
+            return new InventoryPage();
         }
 
         public void TryToLoginByUserModel(UserModel userModel)
@@ -66,7 +67,7 @@ namespace GitHome13.Pages
 
         public override LoginPage OpenPage()
         {
-            Driver.Navigate().GoToUrl(url);
+            Browser.Instance.NavigateToUrl(url);
             return this;
         }
     }

@@ -1,26 +1,28 @@
-﻿using OpenQA.Selenium;
+﻿using GitHome13.Core;
+using OpenQA.Selenium;
 
 
 namespace GitHome13.Pages.Checkout
 {
     internal class CheckoutComplete : BasePage, ICart
     {
+        private By backHomeButton = By.Id("back-to-products");
         public const string URL_CHECKOUT_COMPLETE = "https://www.saucedemo.com/checkout-complete.html";
 
-        public CheckoutComplete(WebDriver driver) : base(driver)
+        public CheckoutComplete()
         {
         }
 
         public override BasePage OpenPage()
         {
-            Driver.Navigate().GoToUrl(URL_CHECKOUT_COMPLETE);
+            Browser.Instance.NavigateToUrl(URL_CHECKOUT_COMPLETE);
             return this;
         }
 
         public InventoryPage ClickBackHome()
         {
-            Driver.FindElement(By.Id("back-to-products")).Click();
-            return new InventoryPage(Driver);
+            Driver.FindElement(backHomeButton).Click();
+            return new InventoryPage();
         }
     }
 }

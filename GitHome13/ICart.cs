@@ -1,5 +1,4 @@
-﻿using Coypu;
-using GitHome13.Pages;
+﻿using GitHome13.Pages;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -11,10 +10,10 @@ namespace GitHome13
 {
     internal interface ICart
     {
-        static CartPage OpenCart(WebDriver driver)
+        static CartPage OpenCart(IWebDriver driver)
         {
             driver.FindElement(By.Id("shopping_cart_container")).Click();
-            return new CartPage(driver);
+            return new CartPage();
         }
     }
 }

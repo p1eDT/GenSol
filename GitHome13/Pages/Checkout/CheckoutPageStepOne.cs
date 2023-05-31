@@ -1,4 +1,5 @@
 ﻿using Bogus;
+using GitHome13.Core;
 using OpenQA.Selenium;
 using SeleniumTests.SwagLabs;
 
@@ -6,28 +7,31 @@ namespace GitHome13.Pages.Checkout
 {
     internal class CheckoutPageStepOne : BasePage
     {
+        private By cancelButton = By.Id("cancel");
+        private By continueButton = By.Id("continue");
+
         public const string URL_CHECKOUT_STEP_ONE = "https://www.saucedemo.com/checkout-step-one.html";
 
-        public CheckoutPageStepOne(WebDriver driver) : base(driver)
+        public CheckoutPageStepOne()
         {
         }
 
         public override BasePage OpenPage()
         {
-            Driver.Navigate().GoToUrl(URL_CHECKOUT_STEP_ONE);
+            Browser.Instance.NavigateToUrl(URL_CHECKOUT_STEP_ONE);
             return this;
         }
 
         public CartPage ClickCancel()
         {
-            Driver.FindElement(By.Id("cancel")).Click();
-            return new CartPage(Driver);
+            Driver.FindElement(cancelButton).Click();
+            return new CartPage();
         }
 
         public CheckoutPageStepTwo ClickContinue() 
         {
-            Driver.FindElement(By.Id("continue")).Click();
-            return new CheckoutPageStepTwo(Driver);
+            Driver.FindElement(continueButton).Click();
+            return new CheckoutPageStepTwo();
         }
 
         public CheckoutPageStepOne FillingUserData()

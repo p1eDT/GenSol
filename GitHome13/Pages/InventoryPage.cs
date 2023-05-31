@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using GitHome13.Core;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,22 +11,25 @@ namespace GitHome13.Pages
 {
     internal class InventoryPage : BasePage, ICart
     {
+        private By openCartLink = By.Id("shopping_cart_container");
+        private By addToCartButton = By.XPath("//button [contains(text(), 'Add to cart') ]");
+
         public const string URL_INVENTORY_PAGE = "https://www.saucedemo.com/inventory.html";
 
-        public InventoryPage(WebDriver driver) : base(driver)
+        public InventoryPage()
         {
         }
 
         public override BasePage OpenPage()
         {
-            Driver.Navigate().GoToUrl(URL_INVENTORY_PAGE);
+            Browser.Instance.NavigateToUrl(URL_INVENTORY_PAGE);
             return this;
         }
 
         private InventoryPage AddToCart()
         {
-            Driver.FindElement(By.XPath("//button [contains(text(), 'Add to cart') ]")).Click();
-            return new InventoryPage(Driver);
+            Driver.FindElement(addToCartButton).Click();
+            return new InventoryPage();
         }
 
         public InventoryPage AddItemsToCart(short count = 1)
@@ -46,8 +50,8 @@ namespace GitHome13.Pages
 
         public CartPage OpenCart()
         {
-            Driver.FindElement(By.Id("shopping_cart_container")).Click();
-            return new CartPage(Driver);
+            Driver.FindElement(openCartLink).Click();
+            return new CartPage();
         }
     }
 }

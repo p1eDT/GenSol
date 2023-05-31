@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using WindowsInput.Native;
+﻿using WindowsInput.Native;
 using WindowsInput;
 
 namespace GitHome13.Helpers
 {
-    internal class MonitorHelper
+    public class MonitorHelper
     {
         public static void MoveToRightMon()
         {
