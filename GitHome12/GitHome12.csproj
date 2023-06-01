@@ -25,4 +25,8 @@
     <PackageReference Include="Selenium.WebDriver" Version="4.9.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\GitHome13\GitHome13.csproj" />
+  </ItemGroup>
+
 </Project>

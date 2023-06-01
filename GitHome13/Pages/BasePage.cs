@@ -3,7 +3,7 @@ using GitHome13.Core;
 
 namespace GitHome13.Pages
 {
-    internal abstract class BasePage
+    public abstract class BasePage
     {
         protected IWebDriver Driver;
 

@@ -2,6 +2,7 @@
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.DevTools.V111.Debugger;
+using OpenQA.Selenium.Interactions;
 
 namespace GitHome13.Core
 {
@@ -73,6 +74,16 @@ namespace GitHome13.Core
             driver.SwitchTo().Alert().Dismiss();
         }
 
+        public void ContextClick(By by)
+        {
+            Actions action = new Actions(Browser.Instance.Driver);
+            action.ContextClick(Browser.Instance.Driver.FindElement(by)).Build().Perform();
+        }
+
+        public string GetAlertText()
+        {
+            return driver.SwitchTo().Alert().Text;
+        }
         public void SwitchToFrame(string id)
         {
             driver.SwitchTo().Frame(id);
