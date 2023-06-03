@@ -1,7 +1,7 @@
 ﻿
 namespace GitHome13.Core
 {
-    internal class DirectoryHelper
+    public class DirectoryHelper
     {
         public static string GetTestDataFolderPath()
         {
