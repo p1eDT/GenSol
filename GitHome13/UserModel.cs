@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SeleniumTests.SwagLabs
 {
-    internal class UserModel
+    public class UserModel
     {
         public string Name { get; set; }
 
