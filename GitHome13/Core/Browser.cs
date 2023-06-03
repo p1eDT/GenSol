@@ -1,7 +1,6 @@
 ﻿using GitHome13.Helpers;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using OpenQA.Selenium.DevTools.V111.Debugger;
 using OpenQA.Selenium.Interactions;
 
 namespace GitHome13.Core
