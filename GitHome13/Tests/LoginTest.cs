@@ -2,7 +2,7 @@
 
 namespace GitHome13.Tests
 {
-    internal class LoginTest:SwagLabBaseTest
+    internal class LoginTest:SaleforceBaseTest
     {
         [Test]
         public void Login_StandartUser()

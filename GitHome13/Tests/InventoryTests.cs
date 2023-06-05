@@ -3,7 +3,7 @@ using GitHome13.Tests;
 
 namespace GitHome13.Tests
 {
-    internal class InventoryTests : SwagLabBaseTest
+    internal class InventoryTests : SaleforceBaseTest
     {
         [Test]
         public void AddItemsToCart()

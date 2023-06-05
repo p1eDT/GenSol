@@ -7,5 +7,7 @@
 		<Parameter name="MoveToRightMonitor" value="true"/>
 		<Parameter name="StandartUserName" value="standard_user"/>
 		<Parameter name="StandartUserPassword" value="secret_sauce"/>
+		<Parameter name="SalesforceUserName" value="error555@yandex.ru"/>
+		<Parameter name="SalesforceUserPassword" value="1234QWER"/>
 	</TestRunParameters>
 </RunSettings>

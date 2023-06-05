@@ -4,7 +4,7 @@ using GitHome13.Tests;
 
 namespace GitHome13.Tests
 {
-    internal class CheckoutTests : SwagLabBaseTest
+    internal class CheckoutTests : SaleforceBaseTest
     {
 
         [Test]

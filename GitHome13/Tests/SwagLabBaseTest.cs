@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace GitHome13.Tests
 {
-    internal class SwagLabBaseTest:BaseTest
+    internal class SaleforceBaseTest:BaseTest
     {
         [SetUp]
         public void Setup()

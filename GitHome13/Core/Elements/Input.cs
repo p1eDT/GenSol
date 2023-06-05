@@ -1,9 +1,4 @@
 ﻿using OpenQA.Selenium;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GitHome13.Core.Elements
 {
@@ -13,7 +8,7 @@ namespace GitHome13.Core.Elements
         {
         }
 
-        public Input(string locator) : base($"//input[@name='{locator}']")
+        public Input(string name) : base($"//label[text()='{name}']/following-sibling::div/input")
         {
         }
     }
