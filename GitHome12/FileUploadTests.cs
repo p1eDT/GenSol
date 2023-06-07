@@ -11,8 +11,7 @@ namespace GitHome12
         {
             string linkText= "File Upload";
 
-            new HerokuAppPage().OpenPage();
-            HerokuAppPage.ClickExample(linkText);
+            new HerokuAppPage().OpenPage().ClickExample(linkText);
 
             Browser.Instance.Driver.FindElement(By.Id("file-upload"))
                 .SendKeys(DirectoryHelper.GetTestDataFolderPath() + "наклейки.jpg");

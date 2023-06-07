@@ -12,13 +12,13 @@ namespace GitHome12.Pages
         {
         }
 
-        public override BasePage OpenPage()
+        public override HerokuAppPage OpenPage()
         {
             Browser.Instance.NavigateToUrl(URL_INDEX);
             return this;
         }
 
-        public static void ClickExample(string linkText)
+        public void ClickExample(string linkText)
         {
             Browser.Instance.Driver.FindElement(By.LinkText(linkText)).Click();
         }

@@ -18,8 +18,7 @@ namespace GitHome12
             string linkText = "Context Menu";
             string expectedTextAlert = "You selected a context menu";
 
-            new HerokuAppPage().OpenPage();
-            HerokuAppPage.ClickExample(linkText);
+            new HerokuAppPage().OpenPage().ClickExample(linkText);
 
             Browser.Instance.ContextClick(By.Id("hot-spot"));
             Assert.That(Browser.Instance.GetAlertText(), Is.EqualTo(expectedTextAlert));

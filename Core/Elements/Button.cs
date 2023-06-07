@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GitHome13.Core.Elements
 {
-    public class Button : BaseElement
+    internal class Button : BaseElement
     {
         public Button(By locator) : base(locator)
         {

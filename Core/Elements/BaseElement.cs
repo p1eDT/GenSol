@@ -7,7 +7,7 @@ namespace GitHome13.Core.Elements
         protected IWebDriver WebDriver => Browser.Instance.Driver;
 
         public IWebElement GetElement() => WebDriver.FindElement(locator);
-        public By locator;
+        protected By locator;
 
         public BaseElement(By locator)
         {
@@ -20,7 +20,7 @@ namespace GitHome13.Core.Elements
         }
         public object ClickElementViaJs()
         {
-            return true;// Browser.Instance.ExecuteScript("arguments[0].click();", contactTab);
+            return Browser.Instance.ExecuteScript("arguments[0].click();", contactTab);
         }
     }
 }

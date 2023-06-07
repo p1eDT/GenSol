@@ -13,8 +13,7 @@ namespace GitHome12
         {
             string linkText = "File Download";
 
-            new HerokuAppPage().OpenPage();
-            HerokuAppPage.ClickExample(linkText);
+            new HerokuAppPage().OpenPage().ClickExample(linkText);
 
             WebElement downloadFile = (WebElement)Browser.Instance.Driver.FindElement(By.XPath("//a[contains(@href,'download')]"));
             downloadFile.Click();
