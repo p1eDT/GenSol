@@ -51,7 +51,7 @@ namespace GitHome13.Salesforce.Pages
         public NewContactModal OpenNewContactModal()
         {
             Browser.Instance.ExecuteScript("arguments[0].click();", contactButton);
-            //contactButton.GetElement().Click();
+            contactButton.GetElement().Click();
             new Button(By.XPath("//div[@title='New']")).GetElement().Click();
             return new NewContactModal();
         }
