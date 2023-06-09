@@ -20,7 +20,7 @@ namespace GitHome13.Salesforce.Tests
             var name = UserBuilder.GetFakerUser().Name;
             string expectedAlert = MessageContainer.AccountCreated(name);
 
-            new LoginPage().OpenPage().Login().OpenNewAccountModal().CreateAccount(name, "Other");
+            new LoginPage().OpenPage().Login().OpenHome().OpenNewAccountModal().CreateAccount(name, "Other");
             var textAlert = Browser.Instance.Driver.FindElement(By.XPath("//div[@data-key='success']/div/descendant::span")).Text;
 
             Assert.That(textAlert, Is.EqualTo(expectedAlert));
@@ -32,7 +32,7 @@ namespace GitHome13.Salesforce.Tests
             var name = UserBuilder.GetFakerUser().Name;
            // string expectedAlert = MessageContainer.AccountCreated(name);
 
-           // new LoginPage().OpenPage().Login().OpenNewContactModal().CreateAccount(name, "Other");
+            new LoginPage().OpenPage().Login().OpenHome().OpenNewContactModal().CreateContact(name, "Other");
 
         }
     }

@@ -13,7 +13,11 @@ namespace GitHome13.Salesforce.Pages
         private Input passwordInput = new(By.XPath("//input[@name='pw']"));
         private Input loginButton = new(By.XPath("//input[@name='Login']"));
 
-        private Button contactButton = new(By.XPath("//*[@data-id-'Contact']//span"));
+        private Button appLauncherButton = new(By.XPath("//div[@role='navigation']/button"));
+        private Button serviceButton = new(By.XPath("//div[@aria-label='Apps']//p[text()='Service']"));
+
+        private Button accountButton = new(By.XPath("//*[@data-id='Account']//span"));
+        private Button contactButton = new(By.XPath("//*[@data-id='Contact']//./a"));
 
         public const string url = "https://p1e-dev-ed.develop.my.salesforce.com/";
 
@@ -25,26 +29,29 @@ namespace GitHome13.Salesforce.Pages
         public LoginPage Login()
         {
             new LoginPage().OpenPage().TryToLoginByUserModel(UserBuilder.GetSalesforceUser());
+            return this;
+        }
 
-            Browser.Instance.NavigateToUrl("https://p1e-dev-ed.develop.lightning.force.com/lightning/o/Account/list?filterName=Recent");
-            new Button(By.XPath("//div[@title='New']")).GetElement().Click();
+        public LoginPage OpenHome()
+        {
+            appLauncherButton.GetElement().Click();
+            //Browser.Instance.ExecuteScript("arguments[0].click();", serviceButton);
+            serviceButton.GetElement().Click();
             return this;
         }
 
         public NewAccountModal OpenNewAccountModal()
         {
-            Browser.Instance.NavigateToUrl("https://p1e-dev-ed.develop.lightning.force.com/lightning/o/Contact/list?filterName=Recent");
+            Browser.Instance.ExecuteScript("arguments[0].click();", accountButton);
+
             new Button(By.XPath("//div[@title='New']")).GetElement().Click();
             return new NewAccountModal();
         }
 
         public NewContactModal OpenNewContactModal()
         {
-            //Browser.Instance.NavigateToUrl("https://p1e-dev-ed.develop.lightning.force.com/lightning/o/Contact/list?filterName=Recent");
-            var contactTab = Browser.Instance.Driver.FindElement(By.XPath("//*[@data-id-'Contact']//span"));
-
-            Browser.Instance.ExecuteScript("arguments[0].click();", contactTab);
-
+            Browser.Instance.ExecuteScript("arguments[0].click();", contactButton);
+            //contactButton.GetElement().Click();
             new Button(By.XPath("//div[@title='New']")).GetElement().Click();
             return new NewContactModal();
         }

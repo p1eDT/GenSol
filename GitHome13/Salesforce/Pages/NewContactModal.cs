@@ -5,7 +5,7 @@ namespace GitHome13.Salesforce.Pages
 {
     public class NewContactModal
     {
-        Input lastName = new("Last Name");
+        Input accountName = new("Account Name");
         PartialTextDropDown typeDropDowncs = new("Account Name");
         Button save = new("SaveEdit");
         Button cancel = new("CancelEdit");
@@ -13,7 +13,7 @@ namespace GitHome13.Salesforce.Pages
 
         internal void CreateContact(string name, string listOption)
         {
-            lastName.GetElement().SendKeys(name);
+            accountName.GetElement().SendKeys(name);
             typeDropDowncs.Select(listOption);
             typeDropDowncs.GetElement().Clear();
             typeDropDowncs.SelectByPartText("adfg");
