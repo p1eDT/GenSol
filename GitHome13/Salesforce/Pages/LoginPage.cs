@@ -16,8 +16,8 @@ namespace GitHome13.Salesforce.Pages
         private Button appLauncherButton = new(By.XPath("//div[@role='navigation']/button"));
         private Button serviceButton = new(By.XPath("//div[@aria-label='Apps']//p[text()='Service']"));
 
-        private Button accountButton = new(By.XPath("//*[@data-id='Account']//span"));
-        private Button contactButton = new(By.XPath("//*[@data-id='Contact']//./a"));
+        private Button accountButton = new(By.XPath("//*[@data-id='Account']"));
+        private Button contactButton = new(By.XPath("//*[@data-id='Contact']"));
 
         public const string url = "https://p1e-dev-ed.develop.my.salesforce.com/";
 
@@ -43,14 +43,13 @@ namespace GitHome13.Salesforce.Pages
         public NewAccountModal OpenNewAccountModal()
         {
             Browser.Instance.ExecuteScript("arguments[0].click();", accountButton);
-
+            //accountButton.GetElement().Click();
             new Button(By.XPath("//div[@title='New']")).GetElement().Click();
             return new NewAccountModal();
         }
 
         public NewContactModal OpenNewContactModal()
         {
-            Browser.Instance.ExecuteScript("arguments[0].click();", contactButton);
             contactButton.GetElement().Click();
             new Button(By.XPath("//div[@title='New']")).GetElement().Click();
             return new NewContactModal();

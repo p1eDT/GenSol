@@ -9,32 +9,39 @@ namespace GitHome13.Core.Elements
 {
     internal class PartialTextDropDown:BaseElement
     {
-        string optionTemplate = "";
-        string optionByPartTemplate = "";
+        string optionTemplate = "//*[@title='{0}']";
+        string optionByPartTemplate = "//*[contains(@title,'{0}')]";
+        Button clearButton = new (By.XPath("//button[@title='Clear Selection']"));
 
-        private By ClearSectionCross = By.CssSelector("");
         public PartialTextDropDown(By locator) : base(locator)
         {
         }
 
-        public PartialTextDropDown(string locator) : base($"//label[text()='{locator}']/following-sibling::div/input")
+        public PartialTextDropDown(string locator) : base($"//label[text()='{locator}']/following-sibling::div//input")
         {
         }
         public void Clear()
         {
-            WebDriver.FindElement(By.XPath("button")).Click();
+            clearButton.GetElement().Click();
         }
 
-        public new void Select(string option)
+        public void BaseSelect(string option, By by)
         {
             WebDriver.FindElement(locator).Click();
-            WebDriver.FindElement(By.XPath($"")).Click();
+            WebDriver.FindElement(locator).SendKeys(option);
+            WebDriver.FindElement(by).Click();
+        }
+
+        public void Select(string option)
+        {
+            var optionLocator = string.Format(optionTemplate, option);
+            BaseSelect(option, By.XPath(optionLocator));
         }
 
         public void SelectByPartText(string option)
         {
-            WebDriver.FindElement(locator).Click();
-            WebDriver.FindElement(By.XPath($"containc")).Click();
+            var optionLocator = string.Format(optionByPartTemplate, option);
+            BaseSelect(option,By.XPath(optionLocator));
         }
     }
 }

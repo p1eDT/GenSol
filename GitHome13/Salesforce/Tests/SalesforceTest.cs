@@ -18,11 +18,11 @@ namespace GitHome13.Salesforce.Tests
         public void CreateAccount() 
         {
             var name = UserBuilder.GetFakerUser().Name;
-            string expectedAlert = MessageContainer.AccountCreated(name);
+            string expectedAlert = MessageContainer.ExpectedAlert("Account",name,State.created);
 
             new LoginPage().OpenPage().Login().OpenHome().OpenNewAccountModal().CreateAccount(name, "Other");
-            var textAlert = Browser.Instance.Driver.FindElement(By.XPath("//div[@data-key='success']/div/descendant::span")).Text;
 
+            var textAlert = MessageContainer.GetAlertText();
             Assert.That(textAlert, Is.EqualTo(expectedAlert));
         }
 
@@ -30,10 +30,24 @@ namespace GitHome13.Salesforce.Tests
         public void CreateContact()
         {
             var name = UserBuilder.GetFakerUser().Name;
-           // string expectedAlert = MessageContainer.AccountCreated(name);
+            string expectedAlert = MessageContainer.ExpectedAlert("Contact", name, State.created);
 
-            new LoginPage().OpenPage().Login().OpenHome().OpenNewContactModal().CreateContact(name, "Other");
+            new LoginPage().OpenPage().Login().OpenHome().OpenNewContactModal().CreateContact(name, "Alex");
 
+            var textAlert = MessageContainer.GetAlertText();
+            Assert.That(textAlert, Is.EqualTo(expectedAlert));
+        }
+
+        [Test]
+        public void DeleteContact()
+        {
+            var name = "Richard";
+            string expectedAlert = MessageContainer.ExpectedAlert("Contact", name, State.deleted);
+
+            new LoginPage().OpenPage().Login().OpenHome().OpenNewContactModal().DeleteContact(name);
+
+            var textAlert = MessageContainer.GetAlertText();
+            Assert.That(textAlert, Is.EqualTo(expectedAlert));
         }
     }
 }
