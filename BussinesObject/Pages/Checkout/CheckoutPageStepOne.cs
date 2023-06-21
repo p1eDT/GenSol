@@ -1,11 +1,11 @@
-﻿using Bogus;
-using GitHome13.Core;
+﻿using _Core;
+using Bogus;
 using OpenQA.Selenium;
 using SeleniumTests.SwagLabs;
 
 namespace GitHome13.Pages.Checkout
 {
-    internal class CheckoutPageStepOne : BasePage
+    public class CheckoutPageStepOne : BasePage
     {
         private By cancelButton = By.Id("cancel");
         private By continueButton = By.Id("continue");

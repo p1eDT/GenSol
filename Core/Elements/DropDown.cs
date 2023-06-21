@@ -2,7 +2,7 @@
 
 namespace GitHome13.Core.Elements
 {
-    internal class DropDown:BaseElement
+    public class DropDown:BaseElement
     {
         public DropDown(By locator) : base(locator)
         {

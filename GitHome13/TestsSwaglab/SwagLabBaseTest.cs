@@ -1,4 +1,5 @@
-﻿using GitHome13.Core;
+﻿using _Core;
+using GitHome13.Core;
 using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace GitHome13.Tests
 {
-    internal class SaleforceBaseTest:BaseTest
+    public class SaleforceBaseTest:BaseTest
     {
         [SetUp]
         public void Setup()

@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using _Core;
+using OpenQA.Selenium;
 
 namespace GitHome13.Core.Elements
 {
@@ -20,7 +21,7 @@ namespace GitHome13.Core.Elements
         }
         public object ClickElementViaJs()
         {
-            return Browser.Instance.ExecuteScript("arguments[0].click();", contactTab);
+            return null;// Browser.Instance.ExecuteScript("arguments[0].click();", contactTab);
         }
     }
 }

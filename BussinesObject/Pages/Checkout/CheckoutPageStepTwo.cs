@@ -1,9 +1,9 @@
-﻿using GitHome13.Core;
+﻿using _Core;
 using OpenQA.Selenium;
 
 namespace GitHome13.Pages.Checkout
 {
-    internal class CheckoutPageStepTwo : BasePage
+    public class CheckoutPageStepTwo : BasePage
     {
         private By cancelButton = By.Id("cancel");
         private By finishButton = By.Id("finish");

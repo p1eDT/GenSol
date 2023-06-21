@@ -1,4 +1,4 @@
-﻿using GitHome13.Core;
+﻿using _Core;
 using GitHome13.Tests;
 
 namespace GitHome13.Salesforce.Tests

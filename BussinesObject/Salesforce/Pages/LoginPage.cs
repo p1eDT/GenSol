@@ -1,4 +1,5 @@
-﻿using GitHome13.Core;
+﻿using _Core;
+using GitHome13.Core;
 using GitHome13.Core.Elements;
 using GitHome13.Helpers;
 using GitHome13.Pages;
@@ -7,7 +8,7 @@ using SeleniumTests.SwagLabs;
 
 namespace GitHome13.Salesforce.Pages
 {
-    internal class LoginPage : BasePage
+    public class LoginPage : BasePage
     {
         private Input userNameInput = new(By.XPath("//input[@name='username']"));
         private Input passwordInput = new(By.XPath("//input[@name='pw']"));

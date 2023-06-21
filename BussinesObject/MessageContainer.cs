@@ -1,14 +1,9 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V111.ServiceWorker;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using _Core;
+using OpenQA.Selenium;
 
 namespace GitHome13.Core
 {
-    internal class MessageContainer
+    public class MessageContainer
     {
         public static string errorMessage = "Something went wrong!";
         private static By sucessAlert = By.XPath("//div[@data-key='success']/div/descendant::span");

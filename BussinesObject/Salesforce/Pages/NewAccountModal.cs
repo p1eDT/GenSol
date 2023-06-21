@@ -1,4 +1,5 @@
-﻿using GitHome13.Core;
+﻿using _Core;
+using GitHome13.Core;
 using GitHome13.Core.Elements;
 using GitHome13.Pages;
 using OpenQA.Selenium;

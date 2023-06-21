@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GitHome13.Core.Elements
 {
-    internal class PartialTextDropDown:BaseElement
+    public class PartialTextDropDown:BaseElement
     {
         string optionTemplate = "";
         string optionByPartTemplate = "";

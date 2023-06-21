@@ -1,10 +1,10 @@
-﻿using GitHome13.Core;
+﻿using _Core;
 using OpenQA.Selenium;
 
 
 namespace GitHome13.Pages.Checkout
 {
-    internal class CheckoutComplete : BasePage, ICart
+    public class CheckoutComplete : BasePage, ICart
     {
         private By backHomeButton = By.Id("back-to-products");
         public const string URL_CHECKOUT_COMPLETE = "https://www.saucedemo.com/checkout-complete.html";

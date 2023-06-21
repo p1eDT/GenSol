@@ -1,11 +1,12 @@
-﻿using GitHome13.Core;
+﻿using _Core;
+using GitHome13.Core;
 using GitHome13.Helpers;
 using OpenQA.Selenium;
 using SeleniumTests.SwagLabs;
 
 namespace GitHome13.Pages
 {
-    internal class LoginPage : BasePage
+    public class LoginPage : BasePage
     {
         private By UserNameInput = By.Id("user-name");
         private By PasswordInput = By.XPath("//*[@data-test='password']");
