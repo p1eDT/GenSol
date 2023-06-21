@@ -1,10 +1,10 @@
-﻿using GitHome13.Core;
+﻿using _Core;
 using GitHome13.Pages.Checkout;
 using OpenQA.Selenium;
 
 namespace GitHome13.Pages
 {
-    internal class CartPage : BasePage, ICart
+    public class CartPage : BasePage, ICart
     {
         private By continueButton = By.Id("continue-shopping");
         private By checkoutButton = By.Id("checkout");

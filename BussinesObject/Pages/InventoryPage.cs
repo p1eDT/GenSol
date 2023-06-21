@@ -1,9 +1,9 @@
-﻿using GitHome13.Core;
+﻿using _Core;
 using OpenQA.Selenium;
 
 namespace GitHome13.Pages
 {
-    internal class InventoryPage : BasePage, ICart
+    public class InventoryPage : BasePage, ICart
     {
         private By openCartLink = By.Id("shopping_cart_container");
         private By addToCartButton = By.XPath("//button [contains(text(), 'Add to cart') ]");

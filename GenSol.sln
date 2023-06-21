@@ -51,11 +51,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHome12", "GitHome12\GitH
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lesson13", "Lesson13\Lesson13.csproj", "{208BAFD9-17B3-4624-89E9-EFF17D5CCFF6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GitHome13", "GitHome13\GitHome13.csproj", "{123E7A28-9CC0-4941-A36E-4C839EA5055D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_Tests", "GitHome13\_Tests.csproj", "{123E7A28-9CC0-4941-A36E-4C839EA5055D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BussinesObject", "BussinesObject\BussinesObject.csproj", "{6157D099-D7E2-4AD3-BC6E-F99A976B3A3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_BussinesObject", "BussinesObject\_BussinesObject.csproj", "{6157D099-D7E2-4AD3-BC6E-F99A976B3A3F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{04AF80D3-A6A4-4E1B-B059-52FDAA40A305}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_Core", "Core\_Core.csproj", "{04AF80D3-A6A4-4E1B-B059-52FDAA40A305}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

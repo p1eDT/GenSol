@@ -1,9 +1,10 @@
 ﻿using GitHome13.Helpers;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 
-namespace GitHome13.Core
+namespace _Core
 {
     public class Browser
     {
@@ -93,7 +94,7 @@ namespace GitHome13.Core
             driver.SwitchTo().DefaultContent();
         }
 
-        public object ExecuteScript(string scipt, object argument = null)
+        public object? ExecuteScript(string scipt, object argument = null)
         {
             try
             {

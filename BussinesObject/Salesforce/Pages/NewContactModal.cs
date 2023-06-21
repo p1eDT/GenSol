@@ -1,4 +1,5 @@
-﻿using GitHome13.Core;
+﻿using _Core;
+using GitHome13.Core;
 using GitHome13.Core.Elements;
 using OpenQA.Selenium;
 
@@ -16,7 +17,7 @@ namespace GitHome13.Salesforce.Pages
         Button edit = new(By.XPath("//a[@title='Delete']"));
         Button deleteСonfirmation= new(By.XPath("//button[@title='Cancel']"));
 
-        internal void CreateContact(string name, string listOption)
+        public void CreateContact(string name, string listOption)
         {
             accountName.GetElement().SendKeys(name);
             typeDropDowncs.Select(listOption);

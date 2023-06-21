@@ -1,6 +1,5 @@
 ﻿using GitHome13.Core;
 using GitHome13.Salesforce.Pages;
-using OpenQA.Selenium;
 
 namespace GitHome13.Salesforce.Tests
 {

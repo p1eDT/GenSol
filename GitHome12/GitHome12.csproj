@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\GitHome13\GitHome13.csproj" />
+    <ProjectReference Include="..\GitHome13\_Tests.csproj" />
   </ItemGroup>
 
 </Project>
