@@ -1,5 +1,4 @@
 using OpenQA.Selenium;
-using OpenQA.Selenium.DevTools.V111.Browser;
 using OpenQA.Selenium.Interactions;
 
 namespace GitHome12
