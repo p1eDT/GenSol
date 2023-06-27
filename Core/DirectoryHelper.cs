@@ -1,5 +1,4 @@
-﻿
-namespace GitHome13.Core
+﻿namespace _Core
 {
     public class DirectoryHelper
     {

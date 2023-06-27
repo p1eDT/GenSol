@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Data.SqlTypes;
 using System.Reflection;
 
-namespace MyApp // Note: actual namespace depends on the project name.
+namespace GitHome4 // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
@@ -140,7 +140,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             string[] firstSentenceArray = firstSentence.ToLower().Split(" ");
             string[] secondSentenceArray = secondSentence.ToLower().Split(" ");
 
-            String s = String.Format("{0,-15} {1,-10}\n\n", "Word", "Occurs");
+            string s = string.Format("{0,-15} {1,-10}\n\n", "Word", "Occurs");
 
             foreach (string word in firstSentenceArray)
             {
@@ -151,7 +151,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
                         i++;
                     }
                 }
-                s += String.Format("{0,-15} {1,-10:N0}\n", word, i);
+                s += string.Format("{0,-15} {1,-10:N0}\n", word, i);
                 i = 0;
             }
             Console.WriteLine($"\n{s}");

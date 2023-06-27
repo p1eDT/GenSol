@@ -3,7 +3,7 @@ using Bogus;
 using OpenQA.Selenium;
 using SeleniumTests.SwagLabs;
 
-namespace GitHome13.Pages.Checkout
+namespace _BussinesObject.Pages.Checkout
 {
     public class CheckoutPageStepOne : BasePage
     {
@@ -28,7 +28,7 @@ namespace GitHome13.Pages.Checkout
             return new CartPage();
         }
 
-        public CheckoutPageStepTwo ClickContinue() 
+        public CheckoutPageStepTwo ClickContinue()
         {
             Driver.FindElement(continueButton).Click();
             return new CheckoutPageStepTwo();

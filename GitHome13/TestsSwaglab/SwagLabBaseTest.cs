@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GitHome13.Tests
+namespace _Tests.TestsSwaglab
 {
-    public class SaleforceBaseTest:BaseTest
+    public class SaleforceBaseTest : BaseTest
     {
         [SetUp]
         public void Setup()

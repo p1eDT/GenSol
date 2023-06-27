@@ -1,13 +1,12 @@
-﻿using GitHome13.Tests;
-using GitHome13.Core;
+﻿using GitHome13.Core;
 using GitHome12.Pages;
 using OpenQA.Selenium;
-using GitHome13.Core.Elements;
 using OpenQA.Selenium.DevTools.V111.Input;
+using _Core.Elements;
 
 namespace GitHome12
 {
-    internal class DynamicControlsTests : GitHome13.Tests.BaseTest
+    internal class DynamicControlsTests : _Tests.TestsSwaglab.BaseTest
     {
         [Test]
         public void DynamicTest()

@@ -1,7 +1,7 @@
 ﻿using WindowsInput.Native;
 using WindowsInput;
 
-namespace GitHome13.Helpers
+namespace _Core.Helpers
 {
     public class MonitorHelper
     {

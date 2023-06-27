@@ -5,7 +5,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GitHome10
+namespace GitHome10.Linq
 {
     public class User
     {
@@ -27,13 +27,13 @@ namespace GitHome10
         /// </summary>
         public void GetUserAfterCheckMiddleName()
         {
-            if (MiddleName == "" || MiddleName==null)
-            { 
-                Console.WriteLine($"FirstName: {FirstName}\t LastName: {LastName}"); 
+            if (MiddleName == "" || MiddleName == null)
+            {
+                Console.WriteLine($"FirstName: {FirstName}\t LastName: {LastName}");
             }
-            else 
-            { 
-                Show(); 
+            else
+            {
+                Show();
             }
         }
 
@@ -42,7 +42,7 @@ namespace GitHome10
         /// </summary>
         public static List<User> ReverseOrderByLastName(List<User> user)
         {
-            return user.OrderBy(u=>u.LastName).Reverse().ToList();
+            return user.OrderBy(u => u.LastName).Reverse().ToList();
         }
 
         public void Show()

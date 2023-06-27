@@ -1,7 +1,7 @@
 ﻿using _Core;
 using OpenQA.Selenium;
 
-namespace GitHome13.Core
+namespace _BussinesObject
 {
     public class MessageContainer
     {

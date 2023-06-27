@@ -1,7 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using TAF_TMS_C1onl.Utilites.Configuration;
 
-namespace Core.Configuration
+namespace API.Configuration
 {
     public class Configuration
     {

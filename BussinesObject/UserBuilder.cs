@@ -1,8 +1,7 @@
 ﻿using Bogus;
 using NUnit.Framework;
-using SeleniumTests.SwagLabs;
 
-namespace GitHome13.Core
+namespace _BussinesObject
 {
     public class UserBuilder
     {

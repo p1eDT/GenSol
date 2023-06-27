@@ -1,10 +1,10 @@
 ﻿using _Core;
+using _Core.Elements;
 using GitHome13.Core;
-using GitHome13.Core.Elements;
 using GitHome13.Pages;
 using OpenQA.Selenium;
 
-namespace GitHome13.Salesforce.Pages
+namespace _BussinesObject.Salesforce.Pages
 {
     public class NewAccountModal
     {

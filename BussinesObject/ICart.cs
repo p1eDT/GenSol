@@ -1,4 +1,4 @@
-﻿using GitHome13.Pages;
+﻿using _BussinesObject.Pages;
 using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GitHome13
+namespace _BussinesObject
 {
     internal interface ICart
     {

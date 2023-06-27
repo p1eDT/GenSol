@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GitHome13.Core.Elements
+namespace _Core.Elements
 {
-    public class PartialTextDropDown:BaseElement
+    public class PartialTextDropDown : BaseElement
     {
         string optionTemplate = "";
         string optionByPartTemplate = "";

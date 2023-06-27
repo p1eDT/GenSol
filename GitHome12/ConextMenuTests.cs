@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace GitHome12
 {
-    internal class ConextMenuTests: GitHome13.Tests.BaseTest
+    internal class ConextMenuTests: _Tests.TestsSwaglab.BaseTest
     {
         [Test]
         public void ContextTest()

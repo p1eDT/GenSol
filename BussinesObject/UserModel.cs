@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniumTests.SwagLabs
+namespace _BussinesObject
 {
     public class UserModel
     {
@@ -16,6 +16,6 @@ namespace SeleniumTests.SwagLabs
         {
             Name = name;
             Password = password;
-        }   
+        }
     }
 }

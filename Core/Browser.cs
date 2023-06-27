@@ -1,4 +1,4 @@
-﻿using GitHome13.Helpers;
+﻿using _Core.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;

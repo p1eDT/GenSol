@@ -1,8 +1,8 @@
 ﻿using OpenQA.Selenium;
 
-namespace GitHome13.Core.Elements
+namespace _Core.Elements
 {
-    public class DropDown:BaseElement
+    public class DropDown : BaseElement
     {
         public DropDown(By locator) : base(locator)
         {

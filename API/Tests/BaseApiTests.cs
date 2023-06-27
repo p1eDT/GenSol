@@ -1,5 +1,4 @@
 ﻿using API.Core;
-using Core.Configuration;
 using NUnit.Framework;
 
 namespace API.Tests

@@ -1,9 +1,9 @@
-﻿using _Core;
+﻿using _BussinesObject.Pages;
+using _Core;
 using GitHome13.Core;
 using GitHome13.Pages;
-using GitHome13.Tests;
 
-namespace GitHome13.Tests
+namespace _Tests.TestsSwaglab
 {
     internal class CheckoutTests : SaleforceBaseTest
     {

@@ -4,7 +4,7 @@ using GitHome13.Helpers;
 using GitHome13.Core;
 using _Core;
 
-namespace GitHome13.Tests
+namespace _Tests.TestsSwaglab
 {
     [TestFixture]
     public class BaseTest

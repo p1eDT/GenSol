@@ -1,7 +1,7 @@
 ﻿using _Core;
 using OpenQA.Selenium;
 
-namespace GitHome13.Pages
+namespace _BussinesObject.Pages
 {
     public class InventoryPage : BasePage, ICart
     {
