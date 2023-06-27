@@ -1,10 +1,10 @@
-﻿using _Core;
-using GitHome12.Pages;
+﻿using GitHome12.Pages;
+using GitHome13.Core;
 using OpenQA.Selenium;
 
 namespace GitHome12
 {
-    internal class FileUploadTests: _Tests.TestsSwaglab.BaseTest
+    internal class FileUploadTests: GitHome13.Tests.BaseTest
     {
         [Test]
         public void UploadTest()

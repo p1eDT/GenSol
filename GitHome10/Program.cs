@@ -1,6 +1,5 @@
 ﻿using System;
 using GitHome10.Dependencies;
-using GitHome10.Linq;
 
 namespace GitHome10
 {

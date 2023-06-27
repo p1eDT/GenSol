@@ -1,7 +1,7 @@
 ﻿using _Core;
 using OpenQA.Selenium;
 
-namespace _BussinesObject.Pages.Checkout
+namespace GitHome13.Pages.Checkout
 {
     public class CheckoutPageStepTwo : BasePage
     {
@@ -12,7 +12,7 @@ namespace _BussinesObject.Pages.Checkout
 
         public CheckoutPageStepTwo()
         {
-
+            
         }
 
         public override BasePage OpenPage()

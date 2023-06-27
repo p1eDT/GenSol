@@ -1,10 +1,12 @@
-﻿using _BussinesObject.Pages;
-using _Core;
-using _Core.Elements;
+﻿using _Core;
+using GitHome13.Core;
+using GitHome13.Core.Elements;
 using GitHome13.Helpers;
+using GitHome13.Pages;
 using OpenQA.Selenium;
+using SeleniumTests.SwagLabs;
 
-namespace _BussinesObject.Salesforce.Pages
+namespace GitHome13.Salesforce.Pages
 {
     public class LoginPage : BasePage
     {

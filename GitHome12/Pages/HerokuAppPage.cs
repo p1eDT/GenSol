@@ -1,10 +1,10 @@
-﻿using _BussinesObject.Pages;
-using GitHome13.Core;
+﻿using GitHome13.Core;
+using GitHome13.Pages;
 using OpenQA.Selenium;
 
 namespace GitHome12.Pages
 {
-    internal class HerokuAppPage : BasePage
+    internal class HerokuAppPage : GitHome13.Pages.BasePage
     {
         public const string URL_INDEX = "https://the-internet.herokuapp.com/";
 

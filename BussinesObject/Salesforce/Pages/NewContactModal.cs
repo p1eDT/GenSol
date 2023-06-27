@@ -1,9 +1,9 @@
 ﻿using _Core;
-using _Core.Elements;
 using GitHome13.Core;
+using GitHome13.Core.Elements;
 using OpenQA.Selenium;
 
-namespace _BussinesObject.Salesforce.Pages
+namespace GitHome13.Salesforce.Pages
 {
     public class NewContactModal
     {
@@ -12,10 +12,10 @@ namespace _BussinesObject.Salesforce.Pages
         Button save = new("SaveEdit");
         Button cancel = new("CancelEdit");
         Button saveAndNew = new("SaveAndNew");
-        string additionalActionsMenuTemplate = "//a[text()='{0}']/ancestor::tr/descendant::span[contains(text(),'Show')]";
+        string additionalActionsMenuTemplate="//a[text()='{0}']/ancestor::tr/descendant::span[contains(text(),'Show')]";
         Button delete = new(By.XPath("//a[@title='Delete']"));
         Button edit = new(By.XPath("//a[@title='Delete']"));
-        Button deleteСonfirmation = new(By.XPath("//button[@title='Cancel']"));
+        Button deleteСonfirmation= new(By.XPath("//button[@title='Cancel']"));
 
         public void CreateContact(string name, string listOption)
         {
@@ -49,7 +49,7 @@ namespace _BussinesObject.Salesforce.Pages
         {
             var additionalActionsMenu = string.Format(additionalActionsMenuTemplate, name);
             //Browser.Instance.Driver.FindElement(By.XPath(additionalActionsMenu)).Click();
-            Browser.Instance.ExecuteScript("arguments[0].click();", additionalActionsMenu);
+            Browser.Instance.ExecuteScript("arguments[0].click();",additionalActionsMenu);
         }
     }
 }

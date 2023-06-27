@@ -1,7 +1,7 @@
 ﻿using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium;
 
-namespace _Core.Helpers
+namespace GitHome13.Helpers
 {
     public class WaitHelper
     {

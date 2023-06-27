@@ -1,10 +1,10 @@
-﻿using _BussinesObject;
-using _Core;
-using _Core.Helpers;
+﻿using _Core;
 using GitHome13.Core;
+using GitHome13.Helpers;
 using OpenQA.Selenium;
+using SeleniumTests.SwagLabs;
 
-namespace _BussinesObject.Pages
+namespace GitHome13.Pages
 {
     public class LoginPage : BasePage
     {
@@ -21,7 +21,7 @@ namespace _BussinesObject.Pages
         public const string PERFORMANCE_GLITCH_USER = "performance_glitch_user";
         public const string STANDART_USER_PASSWORD = "secret_sauce";
 
-        public LoginPage()
+        public LoginPage() 
         {
         }
 
@@ -29,7 +29,7 @@ namespace _BussinesObject.Pages
         {
             var standartUser = new UserModel(STANDART_USER_NAME, STANDART_USER_PASSWORD);
             TryToLoginByUserModel(standartUser);
-            return new InventoryPage();
+            return new InventoryPage();  
         }
 
         public LoginPage LoginAsLockedOutUser()
@@ -38,7 +38,7 @@ namespace _BussinesObject.Pages
             TryToLoginByUserModel(loginAsLockedOutUser);
             return this;
         }
-
+        
         public LoginPage LoginAsProblemtUser()
         {
             var problemUser = new UserModel(PROBLEM_USER, STANDART_USER_PASSWORD);

@@ -1,23 +1,23 @@
-﻿using _BussinesObject;
+﻿using GitHome13.Core;
 using GitHome13.Salesforce.Pages;
 
-namespace _Tests.Salesforce.Tests
+namespace GitHome13.Salesforce.Tests
 {
     internal class SalesforceTest : SalesforceBaseTest
     {
         [Test]
         public void LoginUser()
         {
-
+ 
             new LoginPage().OpenPage().Login();
 
         }
 
         [Test]
-        public void CreateAccount()
+        public void CreateAccount() 
         {
             var name = UserBuilder.GetFakerUser().Name;
-            string expectedAlert = MessageContainer.ExpectedAlert("Account", name, State.created);
+            string expectedAlert = MessageContainer.ExpectedAlert("Account",name,State.created);
 
             new LoginPage().OpenPage().Login().OpenHome().OpenNewAccountModal().CreateAccount(name, "Other");
 

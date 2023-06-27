@@ -1,9 +1,8 @@
-﻿using _BussinesObject;
-using _Core;
+﻿using _Core;
 using OpenQA.Selenium;
 
 
-namespace _BussinesObject.Pages.Checkout
+namespace GitHome13.Pages.Checkout
 {
     public class CheckoutComplete : BasePage, ICart
     {

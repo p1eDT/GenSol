@@ -1,8 +1,8 @@
-﻿using _BussinesObject.Pages.Checkout;
-using _Core;
+﻿using _Core;
+using GitHome13.Pages.Checkout;
 using OpenQA.Selenium;
 
-namespace _BussinesObject.Pages
+namespace GitHome13.Pages
 {
     public class CartPage : BasePage, ICart
     {
@@ -24,7 +24,7 @@ namespace _BussinesObject.Pages
         public CheckoutPageStepOne ClickCheckout()
         {
             Driver.FindElement(By.Id("checkout")).Click();
-            return new CheckoutPageStepOne();
+            return new CheckoutPageStepOne( );
         }
 
         public InventoryPage ClickContinueShopping()

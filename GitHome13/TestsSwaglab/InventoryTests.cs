@@ -1,6 +1,7 @@
 ﻿using GitHome13.Pages;
+using GitHome13.Tests;
 
-namespace _Tests.TestsSwaglab
+namespace GitHome13.Tests
 {
     internal class InventoryTests : SaleforceBaseTest
     {

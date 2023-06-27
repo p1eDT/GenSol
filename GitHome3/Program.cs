@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GitHome3 // Note: actual namespace depends on the project name.
+namespace MyApp // Note: actual namespace depends on the project name.
 {
     internal class Program
     {
@@ -35,7 +35,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
             }
 
             Console.WriteLine("Enter number");
-            if (!int.TryParse(Console.ReadLine(), out int userInt))
+            if (!(int.TryParse(Console.ReadLine(), out int userInt)))
             {
                 Console.WriteLine("Please use only integer");
                 return;
@@ -48,7 +48,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
                     isMember = true;
                 }
             }
-            Console.WriteLine("Your number " + userInt + " is " + (isMember ? "" : "not ") + "in the array");
+            Console.WriteLine("Your number " + userInt + " is " + ((isMember) ? "" : "not ") + "in the array");
         }
 
         public static void ExcludeNumberFromArray()
@@ -68,7 +68,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
             }
 
             Console.WriteLine("\r\n\r\nEnter a number to exclude");
-            if (!int.TryParse(Console.ReadLine(), out int userInt))
+            if (!(int.TryParse(Console.ReadLine(), out int userInt)))
             {
                 Console.WriteLine("Please use only integer");
                 return;
@@ -85,7 +85,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
 
                 Console.Write(matrix[i] + " ");
             }
-            Console.WriteLine(isMember ? "" : "\r\n\r\nYour number in not in the array");
+            Console.WriteLine((isMember) ? "" : "\r\n\r\nYour number in not in the array");
         }
 
         public static void Task2()
@@ -93,7 +93,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
             //2.Создайте и заполните массив случайным числами и выведете максимальное, минимальное и среднее значение.
             //Для генерации случайного числа используйте метод Random().Пусть будет возможность создавать массив произвольного размера. Пусть размер массива вводится с консоли.  
             Console.WriteLine("Enter the size of the array");
-            if (!uint.TryParse(Console.ReadLine(), out uint size) || size == 0)
+            if (!(uint.TryParse(Console.ReadLine(), out uint size)) || size == 0)
             {
                 Console.WriteLine("Please use only integers greater than zero");
                 return;
@@ -128,7 +128,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
 
             Console.WriteLine("\r\n\r\nMax: " + max);
             Console.WriteLine("Min: " + min);
-            Console.WriteLine("Average: " + average / size);
+            Console.WriteLine("Average: " + (average / size));
 
         }
 
@@ -161,11 +161,11 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
 
             if (average1 > average2)
             {
-                Console.WriteLine("\n\r\n\rAverage " + average1 / 5 + " of Array1 is greater");
+                Console.WriteLine("\n\r\n\rAverage " + (average1 / 5) + " of Array1 is greater");
             }
             else if (average1 < average2)
             {
-                Console.WriteLine("\n\r\n\rAverage " + average2 / 5 + " of Array2 is greater");
+                Console.WriteLine("\n\r\n\rAverage " + (average2 / 5) + " of Array2 is greater");
             }
             else
             {
@@ -181,7 +181,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
             //Снова выведете массив на экран на отдельной строке. 
 
             Console.WriteLine("Enter the size of the array");
-            if (!uint.TryParse(Console.ReadLine(), out uint size) || size == 0)
+            if (!(uint.TryParse(Console.ReadLine(), out uint size)) || size == 0)
             {
                 Console.WriteLine("Please use only integers greater than zero");
                 return;
@@ -321,7 +321,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
             do
             {
                 Console.WriteLine("Enter the size of the array");
-                if (!uint.TryParse(Console.ReadLine(), out size) || size <= 5 || size > 10)
+                if (!(uint.TryParse(Console.ReadLine(), out size)) || size <= 5 || size > 10)
                 {
                     Console.WriteLine("Please use only integers 6 to 10");
                     badNumber = true;
@@ -349,7 +349,7 @@ namespace GitHome3 // Note: actual namespace depends on the project name.
                 if (matrix[i] % 2 == 0)
                 {
                     Array.Resize(ref matrixEven, j + 1);
-                    matrixEven[j] = matrix[i];
+                    matrixEven[j] = (int)matrix[i];
                     j++;
                 }
             }

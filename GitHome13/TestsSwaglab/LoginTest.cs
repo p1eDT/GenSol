@@ -1,8 +1,8 @@
 ﻿using GitHome13.Pages;
 
-namespace _Tests.TestsSwaglab
+namespace GitHome13.Tests
 {
-    internal class LoginTest : SaleforceBaseTest
+    internal class LoginTest:SaleforceBaseTest
     {
         [Test]
         public void Login_StandartUser()

@@ -1,7 +1,7 @@
 ﻿using _Core;
-using _Tests.TestsSwaglab;
+using GitHome13.Tests;
 
-namespace _Tests.Salesforce.Tests
+namespace GitHome13.Salesforce.Tests
 {
     public class SalesforceBaseTest : BaseTest
     {

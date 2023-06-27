@@ -1,4 +1,6 @@
-﻿namespace API.Configuration;
+﻿using Core.Configuration;
+
+namespace TAF_TMS_C1onl.Utilites.Configuration;
 
 public class ApiConfiguration : IConfiguration
 {

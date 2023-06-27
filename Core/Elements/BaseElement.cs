@@ -1,7 +1,7 @@
 ﻿using _Core;
 using OpenQA.Selenium;
 
-namespace _Core.Elements
+namespace GitHome13.Core.Elements
 {
     public class BaseElement
     {

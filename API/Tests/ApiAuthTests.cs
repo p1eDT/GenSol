@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using Core.Configuration;
 using RestSharp;
 using API.BusinessObject;
 using API.BusinessObject.ApiServiceStep;

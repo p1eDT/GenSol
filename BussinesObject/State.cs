@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _BussinesObject
+namespace GitHome13.Core
 {
     public enum State
     {
         created,
         saved,
-        deleted
+        deleted        
     }
 }

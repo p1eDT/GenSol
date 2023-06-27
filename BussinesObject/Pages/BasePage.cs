@@ -2,7 +2,7 @@
 using GitHome13.Core;
 using _Core;
 
-namespace _BussinesObject.Pages
+namespace GitHome13.Pages
 {
     public abstract class BasePage
     {
