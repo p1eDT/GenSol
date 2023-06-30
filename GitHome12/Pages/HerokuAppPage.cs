@@ -1,5 +1,4 @@
-﻿using GitHome13.Core;
-using GitHome13.Pages;
+﻿using _Core;
 using OpenQA.Selenium;
 
 namespace GitHome12.Pages
