@@ -4,7 +4,6 @@ using NUnit.Allure.Core;
 namespace API
 {
     [AllureNUnit]
-    [Parallelizable(ParallelScope.All)]
     internal class BaseApiTest
     {
         private AllureLifecycle allure;

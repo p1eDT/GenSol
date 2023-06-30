@@ -7,7 +7,6 @@ using OpenQA.Selenium;
 namespace GitHome13.Tests
 {
     [AllureNUnit]
-    [Parallelizable(ParallelScope.All)]
     public class BaseTest
     {
         private AllureLifecycle allure;
