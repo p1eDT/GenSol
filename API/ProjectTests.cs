@@ -49,8 +49,8 @@ namespace API
         {
             var projectModel = new CreateProjectModel()
             {
-                Title = "Test",
-                Code = "ghjfлоghj",
+                Title = "Test1",
+                Code = "ghjfлоghj2",
                 Access = "none"
             };
 
