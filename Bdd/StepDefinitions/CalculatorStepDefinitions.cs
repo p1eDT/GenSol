@@ -17,12 +17,13 @@ namespace Bdd.StepDefinitions
         public void WhenTheTwoNumbersAreAdded()
         {
             Console.WriteLine("Added numbers: ");
+
         }
 
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
-            Assert.AreEqual(result, 120);
+            Assert.AreEqual(result, );
         }
     }
 }
