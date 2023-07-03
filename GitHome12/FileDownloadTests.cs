@@ -1,5 +1,5 @@
 ﻿using GitHome12.Pages;
-using GitHome13;
+using _Core;
 using GitHome13.Core;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;

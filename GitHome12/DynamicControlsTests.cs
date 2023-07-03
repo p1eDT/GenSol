@@ -1,9 +1,7 @@
-﻿using GitHome13.Tests;
-using GitHome13.Core;
-using GitHome12.Pages;
+﻿using GitHome12.Pages;
 using OpenQA.Selenium;
 using GitHome13.Core.Elements;
-using OpenQA.Selenium.DevTools.V111.Input;
+using _Core;
 
 namespace GitHome12
 {
