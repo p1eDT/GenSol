@@ -32,6 +32,7 @@
   <ItemGroup>
     <ProjectReference Include="..\BussinesObject\_BussinesObject.csproj" />
     <ProjectReference Include="..\Core\_Core.csproj" />
+    <ProjectReference Include="..\DataBase\DataBase.csproj" />
   </ItemGroup>
 
 </Project>

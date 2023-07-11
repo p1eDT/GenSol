@@ -5,11 +5,19 @@ namespace Bdd.StepDefinitions
     [Binding]
     public sealed class CalculatorStepDefinitions
     {
+        public int firstNumber;
+        public int secondNumber;
+
         [Given("the first number is (.*)")]
-        [Given("the second number is (.*)")]
-        public void GetNumberIs(int number)
+        public void GetFirstNumber(int number)
         {
-            Console.WriteLine(number);
+            firstNumber = number;
+        }
+
+        [Given("the second number is (.*)")]
+        public void GetSecondNumber(int number)
+        {
+            secondNumber = number;
         }
 
 
@@ -23,7 +31,13 @@ namespace Bdd.StepDefinitions
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
-            Assert.AreEqual(result, );
+            Assert.AreEqual(result, firstNumber + secondNumber);
+        }
+
+        [Given(@"the following users exist:")]
+        public void GivenUsersExist(Table table)
+        {
+            Console.WriteLine(table.ToString());
         }
     }
 }

@@ -73,43 +73,44 @@ namespace Bdd.Features
             testRunner.CollectScenarioErrors();
         }
         
-        public virtual void FeatureBackground()
-        {
-#line 4
-#line hidden
-#line 5
- testRunner.Given("the first number is 70", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 6
- testRunner.When("the two numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 7
- testRunner.Then("the result should be 120", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-        }
-        
         [NUnit.Framework.TestAttribute()]
         [NUnit.Framework.DescriptionAttribute("Add two numbers")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
-        [NUnit.Framework.TestCaseAttribute("50", "120", null)]
-        [NUnit.Framework.TestCaseAttribute("55", "125", null)]
-        [NUnit.Framework.TestCaseAttribute("60", "130", null)]
-        [NUnit.Framework.TestCaseAttribute("70", "140", null)]
-        [NUnit.Framework.TestCaseAttribute("75", "145", null)]
-        public void AddTwoNumbers(string secondNumber, string result, string[] exampleTags)
+        [NUnit.Framework.CategoryAttribute("DataSource:Data/TestData.xlsx")]
+        [NUnit.Framework.CategoryAttribute("DataSet:Account")]
+        [NUnit.Framework.CategoryAttribute("Calculator")]
+        [NUnit.Framework.TestCaseAttribute("70", "50", "120", null)]
+        [NUnit.Framework.TestCaseAttribute("70", "55", "125", null)]
+        [NUnit.Framework.TestCaseAttribute("70", "60", "130", null)]
+        [NUnit.Framework.TestCaseAttribute("70", "70", "140", null)]
+        [NUnit.Framework.TestCaseAttribute("70", "75", "145", null)]
+        [NUnit.Framework.TestCaseAttribute("70", "75", "145", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "2", "3", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "3", "4", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "4", "5", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "5", "6", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "6", "7", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "7", "8", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "8", "9", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "9", "10", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "10", "11", null)]
+        [NUnit.Framework.TestCaseAttribute("1", "11", "12", null)]
+        public void AddTwoNumbers(string firstNumber, string secondNumber, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag"};
+                    "DataSource:Data/TestData.xlsx",
+                    "DataSet:Account",
+                    "Calculator"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
             string[] tagsOfScenario = @__tags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("FirstNumber", firstNumber);
             argumentsOfScenario.Add("SecondNumber", secondNumber);
             argumentsOfScenario.Add("Result", result);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Add two numbers", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 10
+#line 5
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -119,17 +120,52 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 4
-this.FeatureBackground();
+#line 6
+ testRunner.Given(string.Format("the first number is {0}", firstNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 11
+#line 7
  testRunner.Given(string.Format("the second number is {0}", secondNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 12
+#line 8
  testRunner.When("the two numbers are added", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 13
+#line 9
  testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Table")]
+        [NUnit.Framework.CategoryAttribute("Calculator")]
+        public void Table()
+        {
+            string[] tagsOfScenario = new string[] {
+                    "Calculator"};
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Table", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 21
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Author",
+                            "Title"});
+                table1.AddRow(new string[] {
+                            "Martin Fowler",
+                            "Analysis Patterns"});
+                table1.AddRow(new string[] {
+                            "Gojko Adzic",
+                            "Bridging the Communication Gap"});
+#line 22
+ testRunner.Given("the following users exist:", ((string)(null)), table1, "Given ");
 #line hidden
             }
             this.ScenarioCleanup();
