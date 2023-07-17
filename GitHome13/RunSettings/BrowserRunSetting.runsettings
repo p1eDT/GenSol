@@ -4,7 +4,7 @@
 		<Parameter name="Headless" value="false"/>
 		<Parameter name="BrowseType" value="Chrome"/>
 		<Parameter name="ImplicityWait" value="10"/>
-		<Parameter name="MoveToRightMonitor" value="true"/>
+		<Parameter name="MoveToRightMonitor" value="false"/>
 		<Parameter name="StandartUserName" value="standard_user"/>
 		<Parameter name="StandartUserPassword" value="secret_sauce"/>
 		<Parameter name="SalesforceUserName" value="error555@yandex.ru"/>
