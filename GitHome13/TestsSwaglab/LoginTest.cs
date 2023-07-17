@@ -27,7 +27,7 @@ namespace GitHome13.Tests
         }
 
         [Test]
-        public void test32()
+        public void GetScreenWithHighlight()
         {
             Pen pen = new Pen(System.Drawing.Color.DarkRed, 3);
 
@@ -48,7 +48,7 @@ namespace GitHome13.Tests
             var g = Graphics.FromImage(bmpScreenshot);
 
             //копируем с экрана в созданный ранее объект
-            //прописываю левый верхний угол
+            //прописываю левый верхний угол по высоте, т.к. панель инструментов хрома и панель задач лишние, примерно равны
             g.CopyFromScreen(0, (windowHeight - contentHeight)/2, 0, 0, Browser.Instance.Driver.Manage().Window.Size);
 
             By PasswordInput = By.XPath("//*[@data-test='password']");
